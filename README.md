@@ -7,6 +7,7 @@ The purpose of fast-rds is to streamline Amazon Web Services' RDS database creat
 ### Prerequisites
 
 In order to run fast-rds, you must have the latest AWS CLI version installed and configured.
+
 [You may select and install AWS CLI here.](https://aws.amazon.com/cli/)
 
 To configure your AWS CLI,
