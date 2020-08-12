@@ -1,0 +1,11 @@
+{
+  "table": [
+    { "field": "id", "type": "uuid", "primary_key": true },
+    { "field": "email", "type": "text", "unique": true, "not_null": true, "personal_data": true },
+    { "field": "name", "type": "text", "not_null": true, "personal_data": true },
+    { "field": "created_at", "type": "date", "default": "Now()", "not_null": true },
+    { "field": "updated_at", "type": "date", "default": "Now()", "not_null": true },
+    { "field": "active", "type": "boolean", "not_null": true, "default": true }
+  ],
+  "description": "This table contains sensitive user information."
+}
