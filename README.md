@@ -27,7 +27,8 @@ The `!more` command will print a description and valid values for the option you
 
 ### JSON Schema to PostgreSQL
 
-After the database is created, the schema provided in `./schemas/` is used to generate a `.sql` file. See below:
+After the database is created, the schema provided in `./schemas/` is used to generate a `.sql` file.
+Schema:
 ```json
 {
   "table": [
@@ -41,7 +42,7 @@ After the database is created, the schema provided in `./schemas/` is used to ge
   "description": "This table contains sensitive user information."
 }
 ```
-Becomes:
+Generates:
 ```sql
 -- Create new table for example database
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
