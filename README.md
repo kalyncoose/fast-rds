@@ -1,6 +1,6 @@
 # fast-rds
 
-`[fast-rds]` is a proof-of-concept tool designed to streamline database creation using a configuration file and code generation to create and execute SQL based on a provided schema.
+`[fast-rds]` is a proof-of-concept tool designed to streamline [AWS RDS](https://aws.amazon.com/rds/) database creation using configuration files and code generation.
 
 ## Demo
 
