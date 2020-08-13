@@ -238,7 +238,7 @@ def create_without_config():
         else:
             print('\n' + tag + 'IOPS Value:', end=' ')
             iops_value = input()
-            if iops_value.isdigit() and (5 <= int(iops_value) <= 1000):
+            if iops_value.isdigit() and (1000 <= int(iops_value) <= 40000):
                 check_iops_value = True
                 config['Iops'] = int(iops_value)
             elif iops_value.lower().startswith('!more'):
@@ -246,7 +246,7 @@ def create_without_config():
                         '\nConstraints: For mariadb, mysql, oracle, and postgres instances, IOPS must be a multiple between\n' +
                         '0.5 and 50 of the storage amount for the DB instance.\n' + 
                         '\nValid Values:\n' + 
-                        '- 5 to 1000')
+                        '- 1000 to 40000')
             else:
                 print(Style.BRIGHT + 'Invalid entry. Type ' + Fore.YELLOW + '!more' + Fore.RESET + ' for more information.')
 
