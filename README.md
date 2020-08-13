@@ -84,20 +84,25 @@ To configure your AWS CLI, use `aws configure` once installed.
 
 **Note:** It is recommended that you configure your AWS CLI based on an IAM user's security credentials.
 
-#### Pypi Packages
+#### Requirements Installation
 
-This project requires the following pypi packages to be installed:
-* `pip install boto3` - Use AWS in Python
-* `pip install psycopg2` - Connect and Execute Postgresql in Python
-* `pip install progress` - Progress/Loading Bar
-* `pip install colorama` - Text color support for Windows Command Prompt/Linux Terminals
-* `pip install js-regex` - Use JavaScript regex in Python
+Run the following to install all the requirements:
+```
+pip install -r requirements.txt
+```
+
+Explanation of Package Usage:
+* `boto3` - Use AWS in Python
+* `psycopg2` - Connect and Execute Postgresql in Python
+* `progress` - Progress/Loading Bar
+* `colorama` - Text color support for Windows Command Prompt/Linux Terminals
+* `js-regex` - Use JavaScript regex in Python
 
 #### Copy and Modify Example Files
 
 Once your project is ready to run, copy the `example.json` file in both `./configs/` and `./schemas/` then rename and modify the values to your preference.
 
-#### Run the Project
+### Run the Project
 
 While in the directory of `fast_rds.py`, run the project using `python.exe fast_rds.py [command] [option]`.
 
