@@ -68,7 +68,7 @@ def automate_with_config(auto_name):
                 else:
                     config[key[0]] = key[1]
             else:
-                print(Fore.YELLOW + key[0] + ' skipped as empty')
+                #print(Fore.YELLOW + key[0] + ' skipped as empty')
                 del config[key[0]]
     
     cri.create_rds_instance(auto_name, **config)
