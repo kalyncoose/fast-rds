@@ -10,7 +10,7 @@
 
 The `!automate [option]` command will create the database given the config JSON file in the `./configs/` directory. Then, once the database status is `Available`, it will generate an SQL file based on the JSON schema file in the `./schemas/` directory. Once the SQL is generated, it will execute it on the database and then make the database no longer publicly accessible in AWS.
 
-### Database Configuration
+### Instance Configuration
 When automated, the database instance is configured with the values from a file in the `./configs/` directory.
 
 Example:
