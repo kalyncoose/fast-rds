@@ -7,7 +7,7 @@ The purpose of fast-rds is to streamline Amazon Web Services' RDS database creat
 ### !automate command
  ![!automate command demo](/demo-automate.gif)
  ![Resulting database in RDS](/demo-automate.png)
- The `!automate [option]` command will create an RDS instance from the specified `[option]`.json in ./configs/ directory and generate an SQL file based on the specified `[option]`.json in ./schemas/ directory. Therefore, both .json files will have the exact same name so that `!automate [option]` will use both.
+ The `!automate [option]` command will create an RDS instance from the specified `[option].json` in ./configs/ directory and generate an SQL file based on the specified `[option].json` in ./schemas/ directory. Therefore, **both `.json` files require the same name**.
  
 ### !create command
 
