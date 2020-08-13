@@ -10,10 +10,6 @@ In order to run fast-rds, you must have the latest AWS CLI version installed and
 
 [You may select and install AWS CLI here.](https://aws.amazon.com/cli/)
 
-To configure your AWS CLI,
-
-```
-aws configure
-```
+To configure your AWS CLI, use `aws configure` once installed.
 
 **Note:** It is recommended that you configure your AWS CLI based on an IAM user's security credentials.
