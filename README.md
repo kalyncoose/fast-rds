@@ -26,6 +26,8 @@ Example:
 }
 ```
 
+A full list of RDS configuration parameters is provided in the `./configs/example.json` file.
+
 ### JSON Schema to PostgreSQL
 
 After the database is created, the schema provided in `./schemas/` is used to generate a `.sql` file.
