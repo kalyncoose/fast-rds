@@ -1,6 +1,6 @@
 # fast-rds
 
-fast-rds is a proof-of-concept tool designed to streamline database creation using configuration and schema files, which are in turn used in code generating SQL files that are executed immediately on the database.
+`[fast-rds]` is a proof-of-concept tool designed to streamline database creation using a configuration file and code generation to create and execute SQL based on a provided schema.
 
 ## Demos
 
@@ -12,6 +12,8 @@ The `!automate [option]` command will create the database given the config JSON 
  
 ### !create command
 #### Using !create with config
+![!create command demo with config](/demo-create-with-config.gif)
+The `!create` command will initially ask if you want to create with or without a config, type 'y' to create with a config. You will have a chance to confirm your configuration. Upon confirmation, the database will be created. Once the database status is `Available`, you will be prompted to enter the name of a schema file (excluding .json) which is located in the `./schemas/` directory. Once the schema is entered, an SQL file will be generated and will be executed on the database. Finally, the database will be made no longer publicly available in AWS.
 
 #### Using !create without config
 ![!create command demo without config](/demo-create-without-config.gif)
