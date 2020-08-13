@@ -16,15 +16,15 @@ When automated, the database instance is configured with the values from a file 
 Example:
 ```json
 {
-    "DBName": "test",
     "DBInstanceIdentifier": "my-example-db",
-    "AllocatedStorage": 100,
     "DBInstanceClass": "db.t2.micro",
     "Engine": "postgres",
-    "MasterUsername": "postgres",
-    "MasterUserPassword": "password",
     "Port": 5432,
     "StorageType": "gp2"
+    "AllocatedStorage": 100,
+    "DBName": "test",
+    "MasterUsername": "postgres",
+    "MasterUserPassword": "password",
 }
 ```
 
