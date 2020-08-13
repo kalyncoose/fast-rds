@@ -1,0 +1,6 @@
+# requirements.in
+boto3
+psycopg2
+progress
+colorama
+js-regex
