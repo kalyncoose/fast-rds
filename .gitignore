@@ -1,2 +1,2 @@
 # Ignore the generated SQL files
-*.sql
+/SQLs/*.sql
