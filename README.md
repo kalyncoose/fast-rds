@@ -106,7 +106,7 @@ Currently, these are the supported commands:
 * `!create` - There are no options needed, this command provides the same functionality as `!automate [option]` but is a more hand-held experience.
 * `!more` - This command is only used when prompted for input during the `!create` command.
 
-See the "Additional Commands" section below for more information.
+See the section below for more information.
 
 ## Additional Commands
 While the `!automate [option]` command is great for when both your configuration file and schema file is ready, you can always use the `!create` command to have a more hand-held experience.
