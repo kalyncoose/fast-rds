@@ -29,6 +29,10 @@ The `!more` command will print a description and valid values for the option you
 
 ### Prerequisites
 
+#### Python 3
+
+This project was created using Python 3.8.5, please [download and install](https://www.python.org/downloads/) the latest Python version.
+
 #### AWS CLI
 
 In order to run fast-rds, you must have the latest AWS CLI version installed and configured.
