@@ -28,6 +28,7 @@ The `!more` command will print a description and valid values for the option you
 ### JSON Schema to PostgreSQL
 
 After the database is created, the schema provided in `./schemas/` is used to generate a `.sql` file.
+
 Schema:
 ```json
 {
