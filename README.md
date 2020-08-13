@@ -9,21 +9,62 @@
  ![Resulting database in RDS](/demos/demo-automate.png)
 
 The `!automate [option]` command will create the database given the config JSON file in the `./configs/` directory. Then, once the database status is `Available`, it will generate an SQL file based on the JSON schema file in the `./schemas/` directory. Once the SQL is generated, it will execute it on the database and then make the database no longer publicly accessible in AWS.
- 
-### !create command
-#### Using !create with config
-![!create command demo with config](/demos/demo-create-with-config.gif)
-The `!create` command will initially ask if you want to create with or without a config, type 'y' to create with a config. You will have a chance to confirm your configuration. Upon confirmation, the database will be created. Once the database status is `Available`, you will be prompted to enter the name of a schema file (excluding .json) which is located in the `./schemas/` directory. Once the schema is entered, an SQL file will be generated and will be executed on the database. Finally, the database will be made no longer publicly available in AWS.
 
-#### Using !create without config
-![!create command demo without config](/demos/demo-create-without-config.gif)
+### Database Configuration
+When automated, the database instance is configured with the values from a file in the `./configs/` directory.
 
-The `!create` command will initially ask if you want to create with or without a config, type 'n' to create without a config. You will be asked to enter the bare minimum of values required to create an RDS instance. Then, you will have a chance to confirm your configuration. Upon confirmation, the database will be created. Once the database status is `Available`, you will be prompted to enter the name of a schema file (excluding .json) which is located in the `./schemas/` directory. Once the schema is entered, an SQL file will be generated and will be executed on the database. Finally, the database will be made no longer publicly available in AWS.
-
-#### Using !more during !create
-![!more during !create](/demos/demo-using-more.gif)
-
-The `!more` command will print a description and valid values for the option you are being prompted during !create (without config).
+Example:
+```json
+{
+    "DBName": "test",
+    "DBInstanceIdentifier": "my-example-db",
+    "AllocatedStorage": 100,
+    "DBInstanceClass": "db.t2.micro",
+    "Engine": "postgres",
+    "MasterUsername": "postgres",
+    "MasterUserPassword": "password",
+    "DBSecurityGroups": "",
+    "VpcSecurityGroupIds": ["sg-074bff253d960e84b"],
+    "AvailabilityZone": "us-east-2a",
+    "DBSubnetGroupName": "",
+    "PreferredMaintenanceWindow": "Sun:05:00-Sun:06:00",
+    "DBParameterGroupName": "default.postgres11",
+    "BackupRetentionPeriod": 7,
+    "PreferredBackupWindow": "11:00-12:00",
+    "Port": 5432,
+    "MultiAZ": false,
+    "EngineVersion": "",
+    "AutoMinorVersionUpgrade": true,
+    "LicenseModel": "postgresql-license",
+    "Iops": 1600,
+    "OptionGroupName": "",
+    "CharacterSetName": "",
+    "PubliclyAccessible": true,
+    "Tags": [
+        [{"Key": "env"}, {"Value": "prod"}],
+        [{"Key": "personal_data"}, {"Value": true}]
+    ],
+    "DBClusterIdentifier": "",
+    "StorageType": "io1",
+    "TdeCredentialArn": "",
+    "TdeCredentialPassword": "",
+    "StorageEncrypted": false,
+    "KmsKeyId": "",
+    "Domain": "",
+    "CopyTagsToSnapshot": true,
+    "MonitoringInterval": 0,
+    "MonitoringRoleArn": "",
+    "DomainIAMRoleName": "",
+    "Timezone": "",
+    "EnableIAMDatabaseAuthentication": true,
+    "EnablePerformanceInsights": true,
+    "PerformanceInsightsKMSKeyId": "",
+    "PerformanceInsightsRetentionPeriod": 7,
+    "EnableCloudwatchLogsExports": ["postgresql", "upgrade"],
+    "DeletionProtection": false,
+    "MaxAllocatedStorage": 1000
+}
+```
 
 ### JSON Schema to PostgreSQL
 
@@ -60,6 +101,21 @@ COMMENT ON COLUMN example.email IS 'personal_data';
 COMMENT ON COLUMN example.name IS 'personal_data';
 COMMENT ON TABLE example IS 'This table contains sensitive user information.';
 ```
+
+### !create command
+#### Using !create with config
+![!create command demo with config](/demos/demo-create-with-config.gif)
+The `!create` command will initially ask if you want to create with or without a config, type 'y' to create with a config. You will have a chance to confirm your configuration. Upon confirmation, the database will be created. Once the database status is `Available`, you will be prompted to enter the name of a schema file (excluding .json) which is located in the `./schemas/` directory. Once the schema is entered, an SQL file will be generated and will be executed on the database. Finally, the database will be made no longer publicly available in AWS.
+
+#### Using !create without config
+![!create command demo without config](/demos/demo-create-without-config.gif)
+
+The `!create` command will initially ask if you want to create with or without a config, type 'n' to create without a config. You will be asked to enter the bare minimum of values required to create an RDS instance. Then, you will have a chance to confirm your configuration. Upon confirmation, the database will be created. Once the database status is `Available`, you will be prompted to enter the name of a schema file (excluding .json) which is located in the `./schemas/` directory. Once the schema is entered, an SQL file will be generated and will be executed on the database. Finally, the database will be made no longer publicly available in AWS.
+
+#### Using !more during !create
+![!more during !create](/demos/demo-using-more.gif)
+
+The `!more` command will print a description and valid values for the option you are being prompted during !create (without config).
 
 ## Getting Started
 
