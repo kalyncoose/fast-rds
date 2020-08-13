@@ -23,7 +23,7 @@ Example:
     "Engine": "postgres",
     "MasterUsername": "postgres",
     "MasterUserPassword": "password",
-	...more config lines
+	// More lines...
 }
 ```
 
