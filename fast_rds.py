@@ -1,3 +1,15 @@
+"""
+     ___   ____           __                 __        ___
+    / _/  / ______ ______/ /_      _________/ _____   /  /
+   / /   / /_/ __ `/ ___/ ________/ ___/ __  / ___/   / / 
+  / /   / __/ /_/ (__  / /_/_____/ /  / /_/ (__  )   / /  
+ / /   /_/  \__,_/____/\__/     /_/   \__,_/____/  _/ /   
+/__/   https://github.com/kalyncoose/fast-rds     /__/    
+
+Provided by Apache 2.0 License
+See requirements.txt for other packages and their licenses.
+"""
+
 import sys
 from colorama import init, Fore, Back, Style
 from functions import create_with_config  as cwc

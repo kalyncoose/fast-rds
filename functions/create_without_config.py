@@ -1,3 +1,15 @@
+"""
+     ___   ____           __                 __        ___
+    / _/  / ______ ______/ /_      _________/ _____   /  /
+   / /   / /_/ __ `/ ___/ ________/ ___/ __  / ___/   / / 
+  / /   / __/ /_/ (__  / /_/_____/ /  / /_/ (__  )   / /  
+ / /   /_/  \__,_/____/\__/     /_/   \__,_/____/  _/ /   
+/__/   https://github.com/kalyncoose/fast-rds     /__/    
+
+Provided by Apache 2.0 License
+See requirements.txt for other packages and their licenses.
+"""
+
 import sys
 import re
 import js_regex
@@ -23,6 +35,10 @@ config = {
     'StorageType': '',
 }
 
+# create_without_config():
+# Prompts user for base-minimum
+# config values for creating an
+# RDS instance.
 def create_without_config():
     print('\n' + tag + 'Create Without Config File\n' +
             'Please enter values for the following configurations...\n' +
@@ -296,17 +312,29 @@ def create_without_config():
         config['Iops'] = 0
     print(Style.BRIGHT + '- Database Master Username: ' + Fore.CYAN + db_master_username + Fore.RESET)
     print(Style.BRIGHT + '- Database Master Password: ' + Fore.CYAN + db_master_password + Fore.RESET)
+    
+    # Require user response to continue instance creation
     check_confirm_config = False
     while not check_confirm_config:
         confirm_config = input('\nConfirm this configuration:' + options)
+        
+        # 'y' answer
         if confirm_config.lower().startswith('y'):
             check_confirm_config = True
+            
+            # Call create_rds_instance() with empty auto_name and include config dict
             cri.create_rds_instance('', **config)
+        
+        # 'n' answer
         elif confirm_config.lower().startswith('n'):
             print('\n' + tag + 'Cancelled.' + Fore.RED + '\nExiting program:' + Fore.RESET + ' You have chosen to cancel the configuration.')
             sys.exit(0)
+        
+        # '!more' answer
         elif confirm_config.lower().startswith('!more'):
             print(tag + 'Configuration Confirmation\n' + 'If you choose to confirm the configuration (\'y\'), the RDS instance will be created with these values.\n' +
                     'If you choose to cancel the configuration (\'n\'), the program will exit and you must start over.')
+        
+        # Invalid answer
         else:
             print(tag + 'Invalid entry. Type ' + Fore.YELLOW + '!more' + Fore.RESET + ' for more information.')
