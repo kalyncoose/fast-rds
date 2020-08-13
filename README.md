@@ -25,6 +25,40 @@ The `!create` command will initially ask if you want to create with or without a
 
 The `!more` command will print a description and valid values for the option you are being prompted during !create (without config).
 
+### JSON Schema to PostgreSQL
+
+After the database is created, the schema provided in `./schemas/` is used to generate a `.sql` file. See below:
+```json
+{
+  "table": [
+    { "field": "id", "type": "uuid", "primary_key": true },
+    { "field": "email", "type": "text", "unique": true, "not_null": true, "personal_data": true },
+    { "field": "name", "type": "text", "not_null": true, "personal_data": true },
+    { "field": "created_at", "type": "date", "default": "Now()", "not_null": true },
+    { "field": "updated_at", "type": "date", "default": "Now()", "not_null": true },
+    { "field": "active", "type": "boolean", "not_null": true, "default": true }
+  ],
+  "description": "This table contains sensitive user information."
+}
+```
+Becomes:
+```sql
+-- Create new table for example database
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+CREATE TABLE IF NOT EXISTS example (
+ id uuid DEFAULT uuid_generate_v4(),
+	email VARCHAR(50) UNIQUE NOT NULL,
+	name VARCHAR(50) NOT NULL,
+	created_at TIMESTAMPTZ NOT NULL DEFAULT Now(),
+	updated_at TIMESTAMPTZ NOT NULL DEFAULT Now(),
+	active BOOLEAN NOT NULL DEFAULT 't',
+	PRIMARY KEY (id)
+);
+COMMENT ON COLUMN example.email IS 'personal_data';
+COMMENT ON COLUMN example.name IS 'personal_data';
+COMMENT ON TABLE example IS 'This table contains sensitive user information.';
+```
+
 ## Getting Started
 
 ### Prerequisites
