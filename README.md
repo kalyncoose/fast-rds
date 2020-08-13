@@ -23,7 +23,7 @@ The `!create` command will initially ask if you want to create with or without a
 #### Using !more during !create
 ![!more during !create](/demo-using-more.gif)
 
-The `!more` command will print a description and the valid values for the option you are being prompted during !create (without config).
+The `!more` command will print a description and valid values for the option you are being prompted during !create (without config).
 
 ## Getting Started
 
