@@ -2,7 +2,7 @@
 
 `[fast-rds]` is a proof-of-concept tool designed to streamline database creation using a configuration file and code generation to create and execute SQL based on a provided schema.
 
-## Demos
+## Demo
 
 ### !automate command
  ![!automate command demo](/demos/demo-automate.gif)
@@ -62,21 +62,6 @@ COMMENT ON COLUMN example.name IS 'personal_data';
 COMMENT ON TABLE example IS 'This table contains sensitive user information.';
 ```
 
-### !create command
-#### Using !create with config
-![!create command demo with config](/demos/demo-create-with-config.gif)
-The `!create` command will initially ask if you want to create with or without a config, type 'y' to create with a config. You will have a chance to confirm your configuration. Upon confirmation, the database will be created. Once the database status is `Available`, you will be prompted to enter the name of a schema file (excluding .json) which is located in the `./schemas/` directory. Once the schema is entered, an SQL file will be generated and will be executed on the database. Finally, the database will be made no longer publicly available in AWS.
-
-#### Using !create without config
-![!create command demo without config](/demos/demo-create-without-config.gif)
-
-The `!create` command will initially ask if you want to create with or without a config, type 'n' to create without a config. You will be asked to enter the bare minimum of values required to create an RDS instance. Then, you will have a chance to confirm your configuration. Upon confirmation, the database will be created. Once the database status is `Available`, you will be prompted to enter the name of a schema file (excluding .json) which is located in the `./schemas/` directory. Once the schema is entered, an SQL file will be generated and will be executed on the database. Finally, the database will be made no longer publicly available in AWS.
-
-#### Using !more during !create
-![!more during !create](/demos/demo-using-more.gif)
-
-The `!more` command will print a description and valid values for the option you are being prompted during !create (without config).
-
 ## Getting Started
 
 ### Prerequisites
@@ -103,3 +88,21 @@ This project requires the following pypi packages to be installed:
 * `pip install progress` - Progress/Loading Bar
 * `pip install colorama` - Text color support for Windows Command Prompt/Linux Terminals
 * `pip install js-regex` - Use JavaScript regex in Python
+
+## Additional Commands
+While the `!automate [option]` command is great for when both your configuration file and schema file is ready, you can always use the `!create` command to have a more hand-held experience.
+
+### !create command
+#### Using !create with config
+![!create command demo with config](/demos/demo-create-with-config.gif)
+The `!create` command will initially ask if you want to create with or without a config, type 'y' to create with a config. You will have a chance to confirm your configuration. Upon confirmation, the database will be created. Once the database status is `Available`, you will be prompted to enter the name of a schema file (excluding .json) which is located in the `./schemas/` directory. Once the schema is entered, an SQL file will be generated and will be executed on the database. Finally, the database will be made no longer publicly available in AWS.
+
+#### Using !create without config
+![!create command demo without config](/demos/demo-create-without-config.gif)
+
+The `!create` command will initially ask if you want to create with or without a config, type 'n' to create without a config. You will be asked to enter the bare minimum of values required to create an RDS instance. Then, you will have a chance to confirm your configuration. Upon confirmation, the database will be created. Once the database status is `Available`, you will be prompted to enter the name of a schema file (excluding .json) which is located in the `./schemas/` directory. Once the schema is entered, an SQL file will be generated and will be executed on the database. Finally, the database will be made no longer publicly available in AWS.
+
+#### Using !more during !create
+![!more during !create](/demos/demo-using-more.gif)
+
+The `!more` command will print a description and valid values for the option you are being prompted during !create (without config).
