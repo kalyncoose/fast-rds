@@ -102,7 +102,7 @@ Explanation of Package Usage:
 
 Once your project is ready to run, copy the `example.json` file in both `./configs/` and `./schemas/` then rename and modify the values to your preference.
 
-#### Run the Project
+### Run the Project
 
 While in the directory of `fast_rds.py`, run the project using `python.exe fast_rds.py [command] [option]`.
 
