@@ -29,6 +29,8 @@ The `!more` command will print a description and valid values for the option you
 
 ### Prerequisites
 
+#### AWS CLI
+
 In order to run fast-rds, you must have the latest AWS CLI version installed and configured.
 
 [You may select and install AWS CLI here.](https://aws.amazon.com/cli/)
@@ -36,3 +38,12 @@ In order to run fast-rds, you must have the latest AWS CLI version installed and
 To configure your AWS CLI, use `aws configure` once installed.
 
 **Note:** It is recommended that you configure your AWS CLI based on an IAM user's security credentials.
+
+#### Pypi Packages
+
+This project requires the following pypi packages to be installed:
+* `pip install boto3` - Use AWS in Python
+* `pip install psycopg2` - Connect and Execute Postgresql in Python
+* `pip install progress` - Progress/Loading Bar
+* `pip install colorama` - Text color support for Windows Command Prompt/Linux Terminals
+* `pip install js-regex` - Use JavaScript regex in Python
