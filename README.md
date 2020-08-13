@@ -22,7 +22,9 @@ Example:
     "DBInstanceClass": "db.t2.micro",
     "Engine": "postgres",
     "MasterUsername": "postgres",
-    "MasterUserPassword": "password"
+    "MasterUserPassword": "password",
+    "Port": 5432,
+    "StorageType": "gp2"
 }
 ```
 
