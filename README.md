@@ -2,6 +2,14 @@
 
 The purpose of fast-rds is to streamline Amazon Web Services' RDS database creation using code generation based on a provided schema.
 
+## Demos
+
+### !automate command
+ ![!automate command demo](/demo-automate.gif)
+### !create command
+
+### !help command
+
 ## Getting Started
 
 ### Prerequisites
