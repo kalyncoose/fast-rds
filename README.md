@@ -22,8 +22,7 @@ Example:
     "DBInstanceClass": "db.t2.micro",
     "Engine": "postgres",
     "MasterUsername": "postgres",
-    "MasterUserPassword": "password",
-	// More lines...
+    "MasterUserPassword": "password"
 }
 ```
 
