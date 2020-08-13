@@ -1,6 +1,6 @@
 # fast-rds
 
-fast-rds is a proof-of-concept tool designed to streamline database creation using configuration and schema files. Additionally, code generation is utilized to create and execute SQL files on the database.
+`[fast-rds]` is a proof-of-concept tool designed to streamline database creation using configuration files and code generation to create and execute SQL files based on a provided schema file.
 
 ## Demos
 
