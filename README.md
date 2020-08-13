@@ -93,6 +93,21 @@ This project requires the following pypi packages to be installed:
 * `pip install colorama` - Text color support for Windows Command Prompt/Linux Terminals
 * `pip install js-regex` - Use JavaScript regex in Python
 
+#### Copy and Modify Example Files
+
+Once your project is ready to run, copy the `example.json` file in both `./configs/` and `./schemas/` then rename and modify the values to your preference.
+
+#### Run the Project
+
+While in the directory of `fast_rds.py`, run the project using `python.exe fast_rds.py [command] [option]`.
+
+Currently, these are the supported commands:
+* `!automate [option]` - Where option is the name of the config and schema file excluding the .json extension.
+* `!create` - There are no options needed, this command provides the same functionality as `!automate [option]` but is a more hand-held experience.
+* `!more` - This command is only used when prompted for input during the `!create` command.
+
+See the "Additional Commands" section below for more information.
+
 ## Additional Commands
 While the `!automate [option]` command is great for when both your configuration file and schema file is ready, you can always use the `!create` command to have a more hand-held experience.
 
