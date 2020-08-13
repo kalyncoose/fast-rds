@@ -125,3 +125,19 @@ The `!create` command will initially ask if you want to create with or without a
 ![!more during !create](/demos/demo-using-more.gif)
 
 The `!more` command will print a description and valid values for the option you are being prompted during !create (without config).
+
+## To Do
+
+### Missing Features
+
+#### More DB Engine Support
+
+This tool currently only supports generating SQL files for a Postgresql database. However, the `!create` command is perfect for creating RDS databases with the other available engine types.
+
+#### Security Group Creation and Modification
+
+This tool currently allows you to pass a pre-defined security group in the `./configs/` file. However, a new feature could generate a new security group with inbound traffic open so that the SQL can be executed and after execution the security group could be modified to remove inbound traffic accessibility.
+
+#### More?
+
+Please let me know if any more features should be added.
