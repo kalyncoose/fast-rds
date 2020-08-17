@@ -53,7 +53,7 @@ Generates:
 -- Create new table for example database
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 CREATE TABLE IF NOT EXISTS example (
- id uuid DEFAULT uuid_generate_v4(),
+	id uuid DEFAULT uuid_generate_v4(),
 	email VARCHAR(50) UNIQUE NOT NULL,
 	name VARCHAR(50) NOT NULL,
 	created_at TIMESTAMPTZ NOT NULL DEFAULT Now(),
