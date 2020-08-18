@@ -1,6 +1,6 @@
 # fast-rds
 
-`[fast-rds]` is a proof-of-concept CLI tool designed to streamline [AWS RDS](https://aws.amazon.com/rds/) database creation using configuration files and code generation.
+fast-rds is a proof-of-concept CLI tool designed to streamline [AWS RDS](https://aws.amazon.com/rds/) database creation using configuration files and code generation.
 
 ## Demo
 
